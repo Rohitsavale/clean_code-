@@ -66,25 +66,4 @@ TEST_F(PrintColorMapTest, CallbackCalledWithCorrectArguments) {
     EXPECT_STREQ(calls[24].major.c_str(), "Violet");
     EXPECT_STREQ(calls[24].minor.c_str(), "Slate");
 }
-How to compile and run
-Make sure you compile your C code (color_map.c) and this test file (test_color_map.cpp) together, linking with gtest:
 
-bash
-Copy
-Edit
-g++ -std=c++11 -pthread test_color_map.cpp color_map.c -lgtest -lgtest_main -o test_color_map
-./test_color_map
-Explanation
-MockColorPairHandler is a static C++ function that matches the C callback signature.
-
-It pushes the parameters it receives into the calls vector inside the test instance.
-
-The tests verify the number of calls and the exact arguments passed on a few selected calls.
-
-If you want me to generate the full C function implementation for printColorMap as well, just ask!
-
-
-
-
-
-Get smarter respons
