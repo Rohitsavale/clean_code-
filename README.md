@@ -4,7 +4,7 @@ training
 easy to understand 
 Its in readable format  
 well organized 
-comments need to be added so it more easist way to understand
+Brief comments above each function explaining what it checks would help future readers.
 we can use Descriptive Function Names to better reflect its purpose 
 
 
