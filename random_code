@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_NAMES 5
+#define MAX_NAME_LEN 50
+#define MAX_OUTPUT_LEN 1024
+
+void generateTaggedString(const char* tag, const char* names[], int nameCount, char* output) {
+    output[0] = '\0';  // Start with empty string
+
+    for (int i = 0; i < nameCount; i++) {
+        strcat(output, tag);
+        strcat(output, names[i]);
+        if (i != nameCount - 1) {
+            strcat(output, " ");  // Separate with space except last
+        }
+    }
+}
+
+int main() {
+    const char* names[MAX_NAMES] = {"Rohit", "Anita", "John", "Maya", "Leo"};
+    char result[MAX_OUTPUT_LEN];
+
+    generateTaggedString("Name:", names, MAX_NAMES, result);
+
+    printf("%s\n", result);
+
+    return 0;
+}
